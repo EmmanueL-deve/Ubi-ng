@@ -1,0 +1,86 @@
+:root {
+  --bg: #f5f6fa;
+  --card-bg: #ffffff;
+  --primary: #007bff;
+  --text: #333;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: var(--text);
+}
+
+.profile-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 700px;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+}
+
+.avatar-section {
+  flex: 1 1 250px;
+  text-align: center;
+  padding: 20px;
+}
+
+.avatar-section img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.info-section {
+  flex: 2 1 350px;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:focus {
+  outline: 2px solid var(--primary);
+}
+
+.list-section ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
