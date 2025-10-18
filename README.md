@@ -7,7 +7,7 @@ This project follows semantic HTML standards and includes `data-testid` attribut
 
 ## 👤 Author Information
 **Name:** Taiwo Emmanuel  
-**Slack Username:** taiwoemmanuel  
+**Slack Username:** emirate  
 
 ---
 
