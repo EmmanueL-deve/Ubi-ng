@@ -1,86 +1,63 @@
-:root {
-  --bg: #f5f6fa;
-  --card-bg: #ffffff;
-  --primary: #007bff;
-  --text: #333;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: system-ui, sans-serif;
   margin: 0;
-  color: var(--text);
+  padding: 1rem;
+  background-color: #f9fafb;
+  color: #222;
 }
-
-.profile-card {
-  background-color: var(--card-bg);
+main {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  max-width: 700px;
-  width: 90%;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
-.profile-card:hover {
-  transform: translateY(-4px);
-}
-
-.avatar-section {
-  flex: 1 1 250px;
+.profile-card {
   text-align: center;
-  padding: 20px;
 }
-
-.avatar-section img {
+.profile-pic {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
+  margin-bottom: 1rem;
 }
-
-.info-section {
-  flex: 2 1 350px;
-  padding: 20px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 15px;
-}
-
-nav a {
-  color: var(--primary);
+.links a {
+  margin: 0 0.5rem;
+  color: #2563eb;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
-
-nav a:focus {
-  outline: 2px solid var(--primary);
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-
-.list-section ul {
-  list-style: disc;
-  margin-left: 20px;
+label {
+  font-weight: 600;
 }
-
-/* Responsive */
+input, textarea, button {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+button {
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover {
+  background-color: #1d4ed8;
+}
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
+.success {
+  color: green;
+  font-weight: 600;
+}
 @media (max-width: 600px) {
-  .profile-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav ul {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  main { padding: 1rem; }
 }
